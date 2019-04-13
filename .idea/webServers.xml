@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3d7fea40-d7dc-4ccc-a5a5-7ba7e22561c3" name="CodeRelease" url="http://10.0.0.9">
+        <fileTransfer host="10.0.0.9" port="22" rootFolder="/opt/CodeRelease" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions controlEncoding="utf-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

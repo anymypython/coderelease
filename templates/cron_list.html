@@ -1,0 +1,105 @@
+{% extends 'layout/base.html' %}
+
+
+{% block css %}
+    <style>
+        pre {
+            border-style: none;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+{% endblock %}
+{#form表单(admin ui)#}
+{% block content %}
+    <div class="box">
+        <div class="box-header">
+            <a href="{% url 'croncreate' %}" class="add-btn btn bg-purple btn-sm">添加计划任务</a>
+            <form method="get" class="box-tools">{% csrf_token %}
+                <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="name" class="form-control pull-right"
+                           placeholder="Search">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="" class="table table-bordered table-hover" role="grid">
+                        <thead>
+                        <tr role="row">
+                            <th class="text-center">序号</th>
+                            <th class="text-center">任务名称</th>
+                            <th class="text-center">任务描述</th>
+                            <th class="text-center">执行时间</th>
+                            <th class="text-center">执行主机</th>
+                            <th class="text-center">创建人</th>
+                            <th class="text-center">创建时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for cron in all_cron %}
+                            <tr role="row" class="odd">
+                                <td class="text-center"><a href="#">{{ forloop.counter }}</a></td>
+                                <td class="text-center"><a href="#">{{ cron.name }}</a></td>
+                                <td class="text-center"> {{ cron.note }}</td>
+                                <td class="text-center"> {{ cron.time|safe }}</td>
+                                <td class="text-center">
+                                    {% for host in cron.host.all %}
+                                        <pre>{{ host.ip_address }}</pre>
+                                    {% endfor %}
+                                </td>
+                                <td class="text-center"> {{ cron.create_user }}</td>
+                                <td class="text-center"> {{ cron.create_time}}</td>
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <a type="button" href="{% url 'cronedit' cron.pk %}"
+                                           class="edit-btn btn btn-primary btn-xs">编辑</a>
+                                        <a type="button" data-url="{% url 'crondel' cron.pk %}" href="#"
+                                           class="btn del-btn btn-danger btn-xs">删除</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                    <div class="pull-right">
+                        <ul class="pagination">
+                            {{ page_html|safe }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+{% endblock %}
+{% block js %}
+    <script>
+        $(function () {
+            $("select").select2();
+            $("#cronlist").addClass('active');
+            $(".del-btn").on('click', function (e) {
+                e.preventDefault();
+                let utl = $(this).attr('data-url');
+                ui.confirm('你是否要删除这条数据', function () { //用来做确认删除的
+                    $.get({
+                        url: utl,
+                        success: function () {
+                            window.location.href = "{% url 'cronlist' %}" //重新请求
+                        }
+                    })
+                })
+            })
+
+
+        })
+    </script>
+{% endblock %}

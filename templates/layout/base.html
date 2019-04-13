@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>代码发布系统</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    {% include 'layout/css.html' %}
+    {% block css %}
+
+    {% endblock %}
+    <style>
+        .box {
+            margin-bottom: 0px;
+        }
+    </style>
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+    {% include 'layout/header.html' %}
+    <!-- Left side column. contains the logo and sidebar -->
+    {% include 'layout/aside.html' %}
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                {{ page_type }}
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+                {% if page_type != '首页' %}
+                    <li class="active">{{ page_type }}</li>
+                {% endif %}
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        {% block content %}
+        {% endblock %}
+        <!-- /.content -->
+
+    </div>
+    <!-- /.content-wrapper -->
+    {% include 'layout/content_footer.html' %}
+
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+{% include 'layout/js.html' %}
+{% block js %}
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21b6bab2-f7ca-4c93-98b9-bbb1a6b9d5e2" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/CodeRelease$tests.coverage" NAME="tests Coverage Results" MODIFIED="1554100101547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/release" />
+    <SUITE FILE_PATH="coverage/CodeRelease$gitobj.coverage" NAME="gitobj Coverage Results" MODIFIED="1553781395731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/release/utils" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CodeRelease">
+      <favorite_root url="file://$PROJECT_DIR$/release/views/command.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/release/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+              <folding>
+                <element signature="e#72#7819#0" />
+                <element signature="e#85#7818#0" />
+                <element signature="e#100#780#0" />
+                <element signature="e#126#670#0" />
+                <element signature="e#147#669#0" />
+                <element signature="e#823#7817#0" />
+                <element signature="e#834#7358#0" />
+                <element signature="e#7374#7669#0" />
+                <element signature="e#7420#7668#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cronedit</find>
+      <find>2</find>
+      <find>update</find>
+      <find>git</find>
+      <find>gitcreate</find>
+      <find>check</find>
+      <find>name</find>
+      <find>ui</find>
+      <find>createBtn</find>
+      <find>create</find>
+      <find>chec</find>
+      <find>pname</find>
+      <find>tagname</find>
+      <find>commit</find>
+      <find>tag_name</find>
+      <find>team</find>
+      <find>bra</find>
+      <find>c</find>
+      <find>detail</find>
+      <find>update_fil</find>
+      <find>update_fi</find>
+      <find>issue_detail</find>
+      <find>详情</find>
+      <find>detail-btn</find>
+      <find>display</find>
+      <find>ip_address</find>
+      <find>nginx_romove_host</find>
+      <find>nginx</find>
+      <find>results_raw</find>
+      <find>update_host</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>src=&quot;{% static &quot;</replace>
+      <replace>pro</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/main/css.html" />
+        <option value="$PROJECT_DIR$/templates/main/base.html" />
+        <option value="$PROJECT_DIR$/templates/main/js.html" />
+        <option value="$PROJECT_DIR$/templates/main/aside.html" />
+        <option value="E:/Personal/桌面/new/web/models.py" />
+        <option value="$PROJECT_DIR$/static/dev" />
+        <option value="$PROJECT_DIR$/templates/main/content_header.html" />
+        <option value="$PROJECT_DIR$/forms.py" />
+        <option value="$PROJECT_DIR$/templates/layout/js.html" />
+        <option value="$PROJECT_DIR$/templates/layout/css.html" />
+        <option value="$PROJECT_DIR$/release/forms.py" />
+        <option value="$PROJECT_DIR$/static/ui.common.js" />
+        <option value="$PROJECT_DIR$/release/middlewares.py" />
+        <option value="$PROJECT_DIR$/CodeRelease/urls.py" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/layout/header.html" />
+        <option value="$PROJECT_DIR$/templates/projectnew.html" />
+        <option value="$PROJECT_DIR$/release/views/index.py" />
+        <option value="$PROJECT_DIR$/templates/user_list.html" />
+        <option value="$PROJECT_DIR$/templates/host_list.html" />
+        <option value="$PROJECT_DIR$/templates/hostnew.html" />
+        <option value="$PROJECT_DIR$/templates/layout/base.html" />
+        <option value="$PROJECT_DIR$/templates/command.html" />
+        <option value="$PROJECT_DIR$/CodeRelease/settings.py" />
+        <option value="$PROJECT_DIR$/release/views/host.py" />
+        <option value="$PROJECT_DIR$/release/utils/ansible2/test_runner.py" />
+        <option value="$PROJECT_DIR$/templates/cron_new.html" />
+        <option value="$PROJECT_DIR$/templates/cron_list.html" />
+        <option value="$PROJECT_DIR$/release/modelforms.py" />
+        <option value="$PROJECT_DIR$/templates/usercreate.html" />
+        <option value="$PROJECT_DIR$/templates/update_version.html" />
+        <option value="$PROJECT_DIR$/release/utils/ansible2/runner.py" />
+        <option value="$PROJECT_DIR$/release/views/cron.py" />
+        <option value="$PROJECT_DIR$/templates/command_list.html" />
+        <option value="$PROJECT_DIR$/release/views/command.py" />
+        <option value="$PROJECT_DIR$/templates/commanddetail.html" />
+        <option value="$PROJECT_DIR$/templates/project_list.html" />
+        <option value="$PROJECT_DIR$/templates/project_detail.html" />
+        <option value="$PROJECT_DIR$/release/views/project.py" />
+        <option value="$PROJECT_DIR$/release/utils/gitobj.py" />
+        <option value="$PROJECT_DIR$/templates/git_update.html" />
+        <option value="$PROJECT_DIR$/release/models.py" />
+        <option value="$PROJECT_DIR$/templates/layout/aside.html" />
+        <option value="$PROJECT_DIR$/release/urls.py" />
+        <option value="$PROJECT_DIR$/templates/issue_detail.html" />
+        <option value="$PROJECT_DIR$/templates/file.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/templates/issue.html" />
+        <option value="$PROJECT_DIR$/release/views/issue.py" />
+        <option value="$PROJECT_DIR$/release/tests.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1597" />
+    <option name="height" value="995" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CodeRelease" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodeRelease" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodeRelease" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodeRelease" type="462c0819:PsiDirectoryNode" />
+              <item name="release" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\yumwei\CodeRelease\release\utils" />
+      <recent name="D:\project\yumwei\CodeRelease\static\plugins" />
+      <recent name="D:\project\yumwei\CodeRelease\templates" />
+      <recent name="D:\project\yumwei\CodeRelease\static" />
+      <recent name="D:\project\yumwei\CodeRelease" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\yumwei\CodeRelease\templates" />
+      <recent name="D:\project\yumwei\CodeRelease\static\plugins" />
+      <recent name="D:\project\yumwei\CodeRelease\release" />
+      <recent name="D:\project\yumwei\CodeRelease\release\views" />
+      <recent name="D:\project\yumwei\CodeRelease\static" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.tests">
+    <configuration name="gitobj" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CodeRelease" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/release/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/release/utils/gitobj.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CodeRelease" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/release" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/release/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CodeRelease" type="Python.DjangoServer" factoryName="Django server">
+      <module name="CodeRelease" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="CodeRelease.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\python36\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.tests" />
+        <item itemvalue="Python.gitobj" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21b6bab2-f7ca-4c93-98b9-bbb1a6b9d5e2" name="Default Changelist" comment="" />
+      <created>1553483755133</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553483755133</updated>
+      <workItem from="1553483756521" duration="587000" />
+      <workItem from="1553484395798" duration="27690000" />
+      <workItem from="1553520183214" duration="5182000" />
+      <workItem from="1553559897196" duration="36049000" />
+      <workItem from="1553609959773" duration="1613000" />
+      <workItem from="1553646564423" duration="18287000" />
+      <workItem from="1553683385720" duration="15049000" />
+      <workItem from="1553733300576" duration="30911000" />
+      <workItem from="1553819554899" duration="9317000" />
+      <workItem from="1553870296097" duration="4489000" />
+      <workItem from="1553912554305" duration="654000" />
+      <workItem from="1553946401837" duration="11122000" />
+      <workItem from="1554011183356" duration="24159000" />
+      <workItem from="1554078750193" duration="2241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="187350000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49848485" visible="true" weight="0.15618336" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.50151515" side_tool="true" weight="0.13432837" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29477197" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933258" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32925472" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" weight="0.32925472" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.32925472" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3359288" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32925472" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32925472" />
+      <window_info anchor="bottom" id="File Transfer" order="14" sideWeight="0.49946696" visible="true" weight="0.2880979" />
+      <window_info anchor="right" id="Remote Host" order="0" weight="0.32995737" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.15085287" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49848485" visible="true" weight="0.13432837" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.50151515" side_tool="true" weight="0.13432837" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26585093" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32703003" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32925472" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.14498934" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CodeRelease/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/command.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="235" column="123" selection-start-line="235" selection-start-column="120" selection-end-line="235" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/views/host.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/utils/ansible2/test_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="93" column="39" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/python36/Lib/site-packages/git/index/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1075">
+          <caret line="1137" column="8" selection-start-line="1137" selection-start-column="8" selection-end-line="1137" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cron_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-904">
+          <caret line="57" column="76" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/python36/Lib/site-packages/git/cmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="547" selection-start-line="547" selection-end-line="547" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/views/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeRelease/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3390">
+          <caret line="113" selection-start-line="113" selection-end-line="114" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cron_new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4500">
+          <caret line="149" column="28" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/utils/ansible2/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="218" column="9" selection-start-line="218" selection-start-column="9" selection-end-line="218" selection-end-column="9" />
+          <folding>
+            <element signature="e#17#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/views/command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/command_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3660">
+          <caret line="122" column="10" selection-start-line="122" selection-start-column="10" selection-end-line="122" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f4977436-c3c8-4445-b1ca-730e57e97989/schema/main/table/release_command" />
+    <entry file="file://$PROJECT_DIR$/templates/commanddetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/project_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#425#444#0#HTML" expanded="true" />
+            <element signature="e#640#659#0#HTML" expanded="true" />
+            <element signature="e#1006#1025#0#HTML" expanded="true" />
+            <element signature="e#1369#1388#0#HTML" expanded="true" />
+            <element signature="e#1583#1602#0#HTML" expanded="true" />
+            <element signature="e#1802#1821#0#HTML" expanded="true" />
+            <element signature="e#2027#2046#0#HTML" expanded="true" />
+            <element signature="e#2257#2276#0#HTML" expanded="true" />
+            <element signature="e#2485#2504#0#HTML" expanded="true" />
+            <element signature="e#3793#3812#0#HTML" expanded="true" />
+            <element signature="e#5105#5124#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/project_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3720">
+          <caret line="124" column="32" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1732" />
+      </provider>
+    </entry>
+    <entry file="file://C:/python36/Lib/site-packages/git/repo/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="969" column="8" selection-start-line="969" selection-start-column="8" selection-end-line="969" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/usercreate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/git_update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="134" column="45" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/python36/Lib/site-packages/django/forms/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="215" column="6" selection-start-line="215" selection-start-column="6" selection-end-line="215" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/课件/8.运维项目/ansible第十天/issue/issue/utils/ansible2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/modelforms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="68" column="6" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout/aside.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="39" column="73" selection-start-line="39" selection-start-column="73" selection-end-line="39" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/file.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/host_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="54" column="31" selection-start-line="53" selection-start-column="20" selection-end-line="57" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f4977436-c3c8-4445-b1ca-730e57e97989/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://b9eb7478-43e4-458c-99fc-329cc090f28f/schema/main/table/release_host" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa13580.38695/update.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6058">
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/utils/ansible2/callback.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+          <folding>
+            <element signature="e#17#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b9eb7478-43e4-458c-99fc-329cc090f28f/schema/main/table/release_hostissue" />
+    <entry file="file://$PROJECT_DIR$/templates/issue_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="29" column="55" lean-forward="true" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#4;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b9eb7478-43e4-458c-99fc-329cc090f28f/schema/main/table/release_issue" />
+    <entry file="das://b9eb7478-43e4-458c-99fc-329cc090f28f/schema/main/table/release_project_dev" />
+    <entry file="das://b9eb7478-43e4-458c-99fc-329cc090f28f/schema/main/table/release_project" />
+    <entry file="file://$PROJECT_DIR$/release/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="35" column="74" selection-start-line="35" selection-start-column="74" selection-end-line="35" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://11c41edb-d9a7-4196-ad29-bf88afa004ac/schema/main/table/release_project_host">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://11c41edb-d9a7-4196-ad29-bf88afa004ac/schema/main/table/release_project">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/views/cron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="49" column="88" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/views/project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+          <folding>
+            <element signature="e#16#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/utils/gitobj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="e#57#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/issue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://11c41edb-d9a7-4196-ad29-bf88afa004ac/schema/main/table/release_hostissue">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://11c41edb-d9a7-4196-ad29-bf88afa004ac/schema/main/table/release_issue">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="8" />
+          <folding>
+            <element signature="e#300#363#0" />
+            <element signature="e#398#842#0" />
+            <element signature="e#822#842#0" />
+            <element signature="e#882#1750#0" />
+            <element signature="e#1670#1697#0" />
+            <element signature="e#1730#1750#0" />
+            <element signature="e#2956#2985#0" />
+            <element signature="e#3018#3034#0" />
+            <element signature="e#3070#3488#0" />
+            <element signature="e#3408#3436#0" />
+            <element signature="e#3469#3488#0" />
+            <element signature="e#4117#4144#0" />
+            <element signature="e#4177#4193#0" />
+            <element signature="e#5812#5839#0" />
+            <element signature="e#5872#6876#0" />
+            <element signature="e#6849#6876#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/views/issue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-354">
+          <caret line="158" column="33" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="33" />
+          <folding>
+            <element signature="e#647#957#0" />
+            <element signature="e#991#1128#0" />
+            <element signature="e#1158#1291#0" />
+            <element signature="e#1329#1468#0" />
+            <element signature="e#1500#2373#0" />
+            <element signature="e#1662#1860#0" />
+            <element signature="e#1879#2076#0" />
+            <element signature="e#2222#2372#0" />
+            <element signature="e#2411#2528#0" />
+            <element signature="e#2930#3138#0" />
+            <element signature="e#3471#3633#0" />
+            <element signature="e#4020#4703#0" />
+            <element signature="e#4186#4446#0" />
+            <element signature="e#4378#4446#0" />
+            <element signature="e#4473#4672#0" />
+            <element signature="e#4500#4652#0" />
+            <element signature="e#4580#4652#0" />
+            <element signature="e#4757#6179#0" />
+            <element signature="e#4820#6104#0" />
+            <element signature="e#5168#5994#0" />
+            <element signature="e#5637#5799#0" />
+            <element signature="e#6791#6932#0" />
+            <element signature="e#7003#7124#1" />
+            <element signature="e#7204#7508#0" />
+            <element signature="e#7234#7507#0" />
+            <element signature="e#7245#7467#0" />
+            <element signature="e#7535#7875#0" />
+            <element signature="e#7589#7860#0" />
+            <element signature="e#7600#7822#0" />
+            <element signature="e#9722#10097#0" />
+            <element signature="e#9760#10096#0" />
+            <element signature="e#9771#10048#0" />
+            <element signature="e#10797#10927#1" />
+            <element signature="e#12113#12248#0" />
+            <element signature="e#12267#12402#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+          <folding>
+            <element signature="e#72#7819#0" />
+            <element signature="e#85#7818#0" />
+            <element signature="e#100#780#0" />
+            <element signature="e#126#670#0" />
+            <element signature="e#147#669#0" />
+            <element signature="e#823#7817#0" />
+            <element signature="e#834#7358#0" />
+            <element signature="e#7374#7669#0" />
+            <element signature="e#7420#7668#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

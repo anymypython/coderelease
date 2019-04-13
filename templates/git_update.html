@@ -1,0 +1,144 @@
+<form class="form-horizontal" id="createForm" action="" method="post">{% csrf_token %}
+    <div class="box-body">
+        {% for field in form %}
+            <div class="form-group{% if field.errors %} has-error{% endif %}">
+                <label class="col-sm-2 control-label">{{ field.label }}
+                    {% if field.rfield.equired %}
+                        <span class="text-red">*</span>
+                    {% endif %}
+                </label>
+                <div class="col-sm-8">
+                    {{ field }}
+                </div>
+                <span class="help-block">
+          {% for error in field.errors %}
+              {{ error }}
+          {% endfor %}
+                    {{ field.help_text }}
+        </span>
+            </div>
+        {% endfor %}
+        <div class="form-group">
+            <label class="col-sm-2 control-label">更新类型
+                <span class="text-red">*</span>
+            </label>
+            <div class="col-sm-8" id="check">
+                <label>
+                    <input type="radio" name="utype" class="minimal" value="bra" checked> 分支更新
+                </label>
+                <label>
+                    <input type="radio" name="utype" class="minimal" value="tag"> tag更新
+                </label>
+            </div>
+        </div>
+        <div class="form-group" id="tag_name">
+            <label class="col-sm-2 control-label">tag信息
+                <span class="text-red">*</span>
+            </label>
+            <div class="col-sm-8">
+                <select class="form-control" id="tag_select" name="tagname">
+                </select>
+            </div>
+        </div>
+        <div class="form-group" id="braname">
+            <label class="col-sm-2 control-label">分支名称
+                <span class="text-red">*</span>
+            </label>
+            <div class="col-sm-8">
+                <select class="form-control" id="bra_select" name="braname">
+                </select>
+            </div>
+        </div>
+        <div class="form-group" id="bracommit">
+            <label class="col-sm-2 control-label">分支的提交记录
+                <span class="text-red">*</span>
+            </label>
+            <div class="col-sm-8">
+                <select class="form-control" id="brancommit_select" name="bracommit">
+                </select>
+            </div>
+        </div>
+        <div class="box-footer text-center col-sm-8">
+            <button id="createBtn" type="button" class="btn btn-info">提交</button>
+            <p class="text-center"><i id='iconWait'></i></p>
+        </div>
+    </div>
+</form>
+
+<script>
+    $(function () {
+        var pname = null;
+        $('select').select2();
+        $('#tag_name').hide();
+        $("#id_project").change(function () {
+                pname = $("#id_project").val();
+                $("#bra_select").empty();
+                $("#brancommit_select").empty();
+                $("#tag_select").empty();
+                $.get({
+                    url: `/release/get/git/${pname}/branches`,
+                    success: function (data) {
+                        console.log(data);
+                        $("#bra_select").append("<option value=0>------</option>");
+                        data.data.forEach(function (d) {
+                            $("#bra_select").append("<option value=" + d + ">" + d + "</option>")
+                        })
+                    }
+                })
+            }
+        );
+        $("#check").change(function () {
+            var c = $("input[name=utype]:checked").val();
+            if (c == "tag") {
+                $("#bracommit").hide();
+                $("#braname").hide();
+                $("#tag_name").show();
+                $("#tag_select").empty();
+                pname = $("#id_project").val();
+                $.get({
+                    url: `/release/get/git/${pname}/tags`,
+                    success: function (data) {
+                        console.log(data);
+                        $("#tag_select").append("<option value=0>------</option>");
+                        data.data.forEach(function (d) {
+                            $("#tag_select").append("<option value=" + d + ">" + d + "</option>")
+                        })
+                    }
+                })
+            } else {
+                $("#braname").show();
+                $("#bracommit").show();
+                $("#tag_name").hide()
+
+            }
+        });
+        $("#bra_select").change(function () {
+            pname = $("#id_project").val();
+            var bra = $("#bra_select").val();
+            $("#brancommit_select").empty();
+            {#console.log(bra);#}
+            if (bra != '0') {
+                $.get({
+                    url: `/release/get/commits/${pname}/${bra}`,
+                    success: function (data) {
+                        $.each(data.data, function (d, n) {
+                            console.log(n);
+                            $("#brancommit_select").append("<option value=" + n.id + ">" + n.message + "</option>")
+                        })
+                    }
+                })
+            }
+        });
+        $('#createBtn').on('click', function (e) {
+            e.preventDefault();
+            Net.post({
+                url: "{% url 'update_git' %}",
+                data: $("#createForm").serialize(), //序列化表单的所有数据
+                btn: $('#createBtn'),
+                icon: $('#iconWait'),
+                go: "{% url 'update_list' %}", //success之后跳转的页面
+            });
+        });
+    })
+
+</script>

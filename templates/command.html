@@ -1,0 +1,250 @@
+{% extends 'layout/base.html' %}
+{% block css %}
+    {% load static %}
+    <style>
+        li {
+            list-style: none;
+        }
+
+        .info {
+            background-color: black;
+            color: white;
+            height: 80%;
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'plugins/zTree_v3/css/zTreeStyle/zTreeStyle.css' %}" type="text/css">
+{% endblock %}
+{% block content %}
+    <div class="box">
+        <div class="row">
+            <div class="col-lg-4 col-sm-3">
+                <div class="zTreeDemoBackground left">
+                    <ul id="treeDemo" class="ztree text-green " style="height: 500px;overflow: scroll"></ul>
+                </div>
+                <div class="form-group">
+                    <textarea name="command" id="command" placeholder="指令输入" style="width: 100%;" rows="3"></textarea>
+                    {#                    <input type="text" class="form-control" id="command" placeholder="指令输入">#}
+                    <button onclick="send_cmd()" id="execute" class="btn btn-danger pull-right">执行</button>
+                    <a id="history" href="{% url 'executed' %}" class="btn btn-primary pull-left">查询历史</a>
+
+                </div>
+
+            </div>
+            <div class="col-lg-8 col-sm-9" style="height:500px;">
+
+                <ul id="log" class="log info" style="height:600px">
+                    <li>当前被勾选的节点共 <span id="checkCount" class="highlight_red"></span> 个</li>
+
+                    {#                    <li>执行指令#}
+                    {#                        <pre id="cmd" class="highlight_red"></pre>#}
+                    {#                    </li>#}
+
+                    <li>执行结果<br><span id="result" class="highlight_red"></span></li>
+
+
+                </ul>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--
+    <div class="box">
+        <div class="box-header">
+            <div class="btn btn-primary btn">操作历史</div>
+            <ul class="table table-hover">
+                <li>cmd</li>
+                <li>pwd</li>
+                <li>ipconfig</li>
+            </ul>
+        </div>
+    </div>
+
+    !-->
+
+    </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript" src="{% static 'plugins/zTree_v3/js/jquery.ztree.core.js' %}"></script>
+    <script type="text/javascript" src="{% static 'plugins/zTree_v3/js/jquery.ztree.excheck.js' %}"></script>
+    <SCRIPT type="text/javascript">
+        $(function () {
+            $('#command_li').addClass('active');
+            $('#cmd').hide()
+        });
+
+        //<!--
+        var setting = {
+            view: {
+                selectedMulti: false
+            },
+            check: {
+                enable: true
+            },
+            data: {
+                simpleData: {
+                    enable: true
+                }
+            },
+            callback: {
+                onCheck: onCheck
+            }
+        };
+
+        var zNodes = [
+            {% for p in projects %}
+                {id:{{ p.pk }}, pId: null, name: "{{ p.name  }}", open: false},
+                {% for h  in p.host.all %}
+                    {id: {{ h.pk }}, pId: {{ p.pk }}, name: "{{ h.ip_address }}({{ h.hostname  }})", open: true},
+                {% endfor %}
+            {% endfor %}
+            {#//pid -->id  父级id#}
+
+        ];
+
+        var clearFlag = false;
+
+        function onCheck(e, treeId, treeNode) {
+            count();
+            if (clearFlag) {
+                clearCheckedOldNodes();
+            }
+        }
+
+        function clearCheckedOldNodes() {
+            var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                nodes = zTree.getChangeCheckedNodes();
+            console.log(nodes);
+            for (var i = 0, l = nodes.length; i < l; i++) {
+                nodes[i].checkedOld = nodes[i].checked;
+            }
+        }
+
+        function count() {
+            var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                checkCount = zTree.getCheckedNodes(true).length - 1;
+            if (checkCount < 0) {
+                checkCount = 0
+            }
+
+            {#nocheckCount = zTree.getCheckedNodes(false).length,#}
+            changeCount = zTree.getChangeCheckedNodes().length;
+            $("#checkCount").text(checkCount);
+            {#$("#nocheckCount").text(nocheckCount);#}
+            $("#changeCount").text(changeCount);
+
+
+        }
+
+        function createTree() {
+            $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+            count();
+            clearFlag = $("#last").attr("checked");
+        }
+
+        $(document).ready(function () {
+            createTree();
+            $("#init").bind("change", createTree);
+            $("#last").bind("change", createTree);
+        });
+
+        //-->
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        var csrftoken = getCookie('csrftoken');
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            beforeSend: function (xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+
+        function send_cmd() {
+            // using jQuery
+            let command = $('#command').val();
+            if (!command) {
+                return alert('命令无效')
+            }
+            let zTree = $.fn.zTree.getZTreeObj("treeDemo");
+            let nodes = zTree.getChangeCheckedNodes();
+            console.log(nodes);
+            if (nodes.length == 0) {
+                return alert('请选中需要操作的主机')
+            }
+            let ips = [];
+            nodes.forEach(function (node) {
+                if (node.pId) {
+                    ips.push(node.name)
+                }
+            });
+            console.log(ips);
+            $('#cmd').text(command);
+            $('#cmd').show();
+            $('#execute').addClass('disabled');
+            $.ajax({
+                url: "{% url 'commandcreate' %}",
+                type: 'POST',
+                dataType: 'json',
+                data: {'command': command, "hosts": ips},
+                success: function (data) {
+                    let res = data.result;
+                    $('#execute').removeClass('disabled');
+                    console.log(res);
+                    let msg = '';
+                    Object.keys(res).forEach(function (k) {
+                        if (k == 'ok') {
+                            Object.keys(res.ok).forEach(function (key) {
+                                console.log(key, res.ok[key].command.stdout);
+                                msg = msg + `<font color='green'>|changed|-${key}>>>:  ${res.ok[key].command.stdout}</font><hr>`
+                            })
+                        } else if (k == 'failed') {
+                            Object.keys(res.failed).forEach(function (key) {
+                                console.log(key, res.failed[key].command.stderr);
+                                msg = msg + `<font color='red'>|failed|-${key}>>>:  ${res.failed[key].command.stderr}</font><hr>`
+                            })
+                        } else if (k == 'skipped') {
+                            Object.keys(res.skipped).forEach(function (key) {
+                                console.log(key, res.skipped[key].command.stdout);
+                                msg = msg + `<font color='cyan'>|skipped|-${key}>>>:  ${res.skipped[key].command.stdout}</font><hr>`
+                            })
+                        } else {
+                            Object.keys(res.unreachable).forEach(function (key) {
+                                console.log(key, res.unreachable[key].command.msg);
+                                msg = msg + `<font color='red'>|unreachable|-${key}>>>:  ${res.unreachable[key].command.msg}</font><hr>`
+                            })
+                        }
+                    });
+
+
+                    $('#result').html(msg)
+
+                }
+            })
+
+        }
+
+    </SCRIPT>
+{% endblock %}

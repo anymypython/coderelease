@@ -1,0 +1,49 @@
+<form class="form-horizontal" id="createForm" enctype="multipart/form-data" action="" method="post">{% csrf_token %}
+    <div class="box-body">
+        {% for field in form_obj %}
+            <div class="form-group{% if field.errors %} has-error{% endif %}">
+                <label class="col-sm-2 control-label">{{ field.label }}
+                    {% if field.rfield.equired %}
+                        <span class="text-red">*</span>
+                    {% endif %}
+                </label>
+                <div class="col-sm-8">
+                    {{ field }}
+                </div>
+                <span class="help-block">
+          {% for error in field.errors %}
+              {{ error }}
+          {% endfor %}
+                    {{ field.help_text }}
+        </span>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="box-footer text-center col-sm-8">
+        <button onclick="upfile()" type="button" class="btn btn-info">提交</button>
+        <p class="text-center"><i id='iconWait'></i></p>
+    </div>
+</form>
+<script>
+    $("select").select2();
+
+    function upfile() {
+        let formdata = new FormData(document.getElementById('createForm'));
+        $.post({
+            url: "{% url 'upload_file' %}",
+            type: 'POST',
+            dataType: 'json',
+            data: formdata,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                window.location.reload()
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    }
+
+
+</script>

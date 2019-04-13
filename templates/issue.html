@@ -1,0 +1,160 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <div data-url="{% url 'update_git' %}" class="btn btn-sm btn-success add-git">Git更新</div>
+                <div data-url="{% url 'upload_file' %}" class="btn btn-sm btn-success add-file">文件更新</div>
+                <form class="box-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover text-center">
+                    <tr>
+                        <th>项目名称</th>
+                        <th>更新时间</th>
+                        <th>更新类型</th>
+                        <th>开发人员</th>
+                        <th>测试人员</th>
+                        <th>操作</th>
+                    </tr>
+                    {% for a in all_obj %}
+                        <tr>
+                            <td>{{ a.project.name }}</td>
+                            <td>{{ a.update_time|date:"Y:m:d H:i:s" }}</td>
+                            <td>{{ a.get_type_display }}</td>
+                            <td>{% for dev in a.project.dev.all %}
+                                {{ dev }}
+                            {% endfor %}
+                            </td>
+                            <td>{% for test in a.project.test.all %}
+                                {{ test }}
+                            {% endfor %}   </td>
+                            <td>
+
+                                <div class="btn-group">
+                                    <div class="btn-group">
+                                        <a type="button" href="#" data-url="{% url 'issue_detail' a.pk %}"
+                                           class="detail-btn btn btn-primary btn-xs">详情</a>
+                                    </div>
+                                    {{ a.status }}
+                                    {% if a.status == "0" %}
+                                        <div class="btn-group">
+                                            <div type="button" data-url="{% url 'file_update_test' a.pk %}"
+                                                 class="update-btn btn btn-success btn-xs">开始更新
+                                            </div>
+                                        </div>
+                                    {% elif a.status == "2" %}
+                                        <div class="btn-group">
+                                            <div type="button" data-url="{% url 'test_success' a.pk %}"
+                                                 class="update-btn btn btn-danger btn-xs">测试通过
+                                            </div>
+                                        </div>
+                                        <div class="btn-group">
+                                            <div type="button" data-url="{% url 'rollback' a.pk %}"
+                                                 class="update-btn btn btn-warning btn-xs">回滚
+                                            </div>
+                                        </div>
+                                    {% elif a.status == "3" %}
+                                        <div class="btn-group">
+                                            <div type="button" data-url="{% url 'update_all' a.pk %}"
+                                                 class="update-btn btn btn-warning btn-xs">再次更新
+                                            </div>
+                                        </div>
+                                    {% elif a.status == "4" %}
+                                        <div class="btn-group">
+                                            <div type="button" data-url="{% url 'rollback' a.pk %}"
+                                                 class="update-btn btn btn-warning btn-xs">回滚
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="btn-group">
+                                            <a type="button" href="#"
+                                               class="update-btn btn btn-success btn-xs disabled">确认</a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                <div class="pull-right">
+                    <ul class="pagination">
+                        {{ page_html|safe }}
+                    </ul>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function () {
+            $("select").select2();
+            $("#menu_issue").addClass("open active");
+            console.log(window.location.pathname);
+            if (window.location.pathname === "{% url 'update_list' %}") {
+                $("#menu_all").addClass("active")
+            } else {
+                $("#menu_rollback").addClass("active")
+            }
+            $(".add-git").on('click', function (e) {
+                e.preventDefault();
+                var url = $(this).attr('data-url');
+                ui.box({
+                    title: 'Git更新',
+                    size: 'lg',
+                    footer: false,
+                    remote: url
+                });
+            });
+            $(".add-file").on('click', function (e) {
+                e.preventDefault();
+                var url = $(this).attr('data-url');
+                ui.box({
+                    title: '文件更新',
+                    size: 'lg',
+                    footer: false,
+                    remote: url
+                });
+            });
+            $(".detail-btn").on('click', function (e) {
+                e.preventDefault();
+                var url = $(this).attr('data-url');
+                ui.box({
+                    title: '命令展示',
+                    size: 'lg',
+                    footer: false,
+                    remote: url
+                });
+            });
+            $(".update-btn").on('click', function (e) {
+                e.preventDefault();
+                var url = $(this).attr('data-url');
+                $(this).text("更新中");
+                $(this).addClass("disabled");
+                $.get({
+                    url: url,
+                    success: function (res) {
+                        if (res.status == "0") {
+                            window.location.reload()
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+{% endblock %}
